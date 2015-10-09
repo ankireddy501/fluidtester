@@ -1,0 +1,375 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap-theme.css"> 
+<link rel="stylesheet" href="bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+header
+	{
+	height:50px;
+	}
+.form-control 
+	{
+	width:75%;
+	margin-left:10%;
+	}
+.btn-group 
+	{
+	margin-top:5%;
+	}
+#in
+	{
+	margin-left:10%;
+	}
+#sel
+	{
+	margin-top:16px;
+	}
+body 
+	{
+	font-family: 'Open Sans', sans-serif;
+	
+	}
+header 
+	{
+	background-color:#0084AD;
+	padding:0px;
+	margin:0px;
+	height:63px;
+	}
+#mobile-testing
+	{
+	vertical-align:middle;
+	font-size:32px;
+	color:#A9CF54;
+	padding-left:15px;
+	text-shadow:4px 4px #000000;
+	font-weight:bold;
+	}
+#section
+	{
+	width:100%;
+	height:65px;
+	padding-left:10px;
+	background-color:rgba(44,35,27, 0.2);
+	}
+#maincontainer
+	{
+	width:90%;
+	padding:0px;
+	margin:auto;
+	}
+#input-div
+	{
+	width:50%;
+	float:left;
+	margin-top:15px;
+	}
+#enter-url
+	{
+	font-size:18px;
+	display:inline-block;
+	}
+#url 
+	{
+	padding-left:5px;
+	display:inline-block;
+	width:80%;
+	}
+.common-style 
+	{
+	width:50%;
+	float:left;
+	}
+#sctn 
+	{
+	width:100%;
+	height:580px;
+	background-image:url("iphone 5s ok.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	display:none;
+	}
+#sctn1
+	{
+	width:100%;
+	height:620px;
+	background-image:url("Galaxy-S6-Edge ok.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	display:none;
+	}
+#sctn2 
+	{
+	width:100%;
+	height:580px;
+	background-image:url("MOBMI44.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	display:none;
+	}
+#sctn3
+	{
+	width:100%;
+	height:935px;
+	background-image:url("195514.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	display:none;
+	}
+#sctn4 
+	{
+	width:100%;
+	height:750px;
+	background-image:url("Galaxy-Tab4-7.0.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	display:none;
+	}
+#sctn5 
+	{
+	width:100%;
+	height:750px;
+	background-image:url("micromax-canvas-tab-p470.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	display:none;
+	}
+main 
+	{
+	width:100%;
+	height:80%;
+	}
+aside 
+	{
+	width:40%;
+	padding-right:10px;
+	float:right;
+	}
+#iphone
+	{
+	height:3.465in;
+	width:1.93in;
+	margin-top:125px;
+	margin-left:2px;
+    border:1px solid #000000;
+	display:none;
+	}
+#samsung 
+	{
+	height:4.83in;
+	width:2.67in;
+	margin-top:82px;
+	margin-left:1px;
+	border:1px solid #000000;
+	display:none;
+	}
+#micromax 
+	{
+	height:4.51in;
+	width:2.48in;
+	margin-top:70px;
+	margin-left:2px;
+	border:1px solid #000000;
+	display:none;
+	}
+#ipad_air
+	{
+	height:7.87in;
+	width:5.855in;
+	margin-top:89px;
+	margin-left:2px;
+	border:1px solid #000000;
+	display:none;
+	}
+#samsung_tab4
+	{
+	height:5.944in;
+	width:3.69in;
+	margin-top:87px;
+	margin-left:1px;
+	border:1px solid #000000;
+	display:none;
+	}
+#micromax_tab 
+	{
+	height:6.4in;
+	width:3.71in;
+	margin-top:71px;
+	margin-left:1px;
+	border:1px solid #000000;
+	display:none;
+	}
+</style>
+<script src="jquery-2.1.4.js"> </script>
+<script src="jquery.min.js"> </script>
+<script src="bootstrap.min.js"></script>
+<script>
+		$(document).ready(function(){
+		
+		$("#vertical").click(function(){
+			alert("hai");
+		});
+		
+		$("#sel").change(function() {
+		var cont= $("#sel").val();
+		var link=$("#txt").val();
+		var ipn=$("#i").val();
+		var sam=$("#s").val();
+		var micro=$("#m").val();
+		var a=$("#air").val();
+		var stab=$("#st").val();
+		var mtab=$("#mt").val();
+		if ($(this).val() == "iphonetab")
+			{
+				$("#sctn").css("background-image", "url(iphone 5s ok.jpg)").hide();  // iphone picture is hidden 
+				$("#iphone").hide();           //iphone's iframe is hidden 
+				$("#sctn1").css("background-image", "url(Galaxy-S6-Edge ok.jpg)").hide();      //samsung picture is hidden 
+				$("#samsung").hide();         //samsung's iframe is hidden 
+				$("#sctn2").css("background-image", "url(MOBMI44.jpg)").hide();      //micromax picture is hidden 
+				$("#micromax").hide();                      //micromax's iframe is hidden 
+				$("#sctn4").css("background-image", "url(Galaxy-Tab4-7.0.jpg)").hide(); 			//samsung tab picture is hidden 
+				$("#samsung_tab4").hide();									// samsung tab's iframe is hidden 
+				$("#sctn5").css("background-image", "url(micromax-canvas-tab-p470.jpg)").hide();	//micromax tab picture is hidden 
+				$("#micromax_tab").hide();									//micromax tab's iframe is hidden 
+				$("#ipad_air").show();
+				$("#ipad_air").prop("src",link)
+				$("#sctn3").css("background-image", "url(195514.jpg)").show();
+				return false;
+			}
+		else if ($(this).val() == "samsung tab")
+			{
+				$("#sctn").css("background-image", "url(iphone 5s ok.jpg)").hide();  // iphone picture is hidden 
+				$("#iphone").hide();           //iphone's iframe is hidden 
+				$("#sctn1").css("background-image", "url(Galaxy-S6-Edge ok.jpg)").hide();      //samsung picture is hidden 
+				$("#samsung").hide();         //samsung's iframe is hidden 
+				$("#sctn2").css("background-image", "url(MOBMI44.jpg)").hide();      //micromax picture is hidden 
+				$("#micromax").hide();                      //micromax's iframe is hidden 
+				$("#sctn3").css("background-image", "url(195514.jpg)").hide();     //ipad picture is hidden 
+				$("#ipad_air").hide();  // ipad iframe is hidden 
+				$("#sctn5").css("background-image", "url(micromax-canvas-tab-p470.jpg)").hide();	//micromax tab picture is hidden 
+				$("#micromax_tab").hide();			//micromax tab's iframe is hidden 
+				$("#samsung_tab4").show();
+				$("#samsung_tab4").prop("src",link)
+				$("#sctn4").css("background-image", "url(Galaxy-Tab4-7.0.jpg)").show();
+				return false;
+			}
+		else if ($(this).val() == "Micro tab")
+			{
+				$("#sctn").css("background-image", "url(iphone 5s ok.jpg)").hide();  // iphone picture is hidden 
+				$("#iphone").hide();           //iphone's iframe is hidden 
+				$("#sctn1").css("background-image", "url(Galaxy-S6-Edge ok.jpg)").hide();      //samsung picture is hidden 
+				$("#samsung").hide();         //samsung's iframe is hidden 
+				$("#sctn2").css("background-image", "url(MOBMI44.jpg)").hide();      //micromax picture is hidden 
+				$("#micromax").hide();                      //micromax's iframe is hidden 
+				$("#sctn3").css("background-image", "url(195514.jpg)").hide();    //ipad picture is hidden 
+				$("#ipad_air").hide();        // ipad iframe is hidden 
+				$("#sctn4").css("background-image", "url(Galaxy-Tab4-7.0.jpg)").hide(); //samsung tab picture is hidden 
+				$("#samsung_tab4").hide();      // samsung tab iframe is hidden 
+				$("#micromax_tab").show();
+				$("#micromax_tab").prop("src",link)
+				$("#sctn5").css("background-image", "url(micromax-canvas-tab-p470.jpg)").show();
+				return false;
+			}
+		else if ($(this).val() == "iphone")
+			{
+				$("#sctn1").css("background-image", "url(Galaxy-S6-Edge ok.jpg)").hide();      //samsung picture is hidden 
+				$("#samsung").hide();         //samsung's iframe is hidden 
+				$("#sctn2").css("background-image", "url(MOBMI44.jpg)").hide();      //micromax picture is hidden 
+				$("#micromax").hide();                      //micromax's iframe is hidden 
+				$("#sctn3").css("background-image", "url(195514.jpg)").hide();    //ipad picture is hidden 
+				$("#ipad_air").hide();        								// ipad iframe is hidden 
+				$("#sctn4").css("background-image", "url(Galaxy-Tab4-7.0.jpg)").hide(); 			//samsung tab picture is hidden 
+				$("#samsung_tab4").hide();									// samsung tab iframe is hidden 
+				$("#sctn5").css("background-image", "url(micromax-canvas-tab-p470.jpg)").hide();	//micromax tab picture is hidden 
+				$("#micromax_tab").hide();									//micromax tab iframe is hidden 
+				$("#iphone").show();
+				$("#iphone").prop("src",link)
+				$("#sctn").css("background-image", "url(iphone 5s ok.jpg)").show();
+				return false;
+			}
+		else if ($(this).val() == "samsung")
+			{
+				$("#sctn").css("background-image", "url(iphone 5s ok.jpg)").hide();  // iphone picture is hidden 
+				$("#iphone").hide();           //iphone's iframe is hidden 
+				$("#sctn2").css("background-image", "url(MOBMI44.jpg)").hide();      //micromax picture is hidden 
+				$("#micromax").hide();                //micromax's iframe is hidden 
+				$("#sctn3").css("background-image", "url(195514.jpg)").hide();    //ipad picture is hidden 
+				$("#ipad_air").hide();        								// ipad iframe is hidden 
+				$("#sctn4").css("background-image", "url(Galaxy-Tab4-7.0.jpg)").hide(); 			//samsung tab picture is hidden 
+				$("#samsung_tab4").hide();									// samsung tab's iframe is hidden 
+				$("#sctn5").css("background-image", "url(micromax-canvas-tab-p470.jpg)").hide();	//micromax tab picture is hidden 
+				$("#micromax_tab").hide();									//micromax tab's iframe is hidden 
+				$("#samsung").show();
+				$("#samsung").prop("src",link)
+				$("#sctn1").css("background-image", "url(Galaxy-S6-Edge ok.jpg)").show();
+				return false;
+			}
+		else if ($(this).val() == "Micromax")
+			{
+				$("#sctn3").css("background-image", "url(195514.jpg)").hide();    //ipad picture is hidden 
+				$("#ipad_air").hide();        								// ipad iframe is hidden 
+				$("#sctn4").css("background-image", "url(Galaxy-Tab4-7.0.jpg)").hide(); 			//samsung tab picture is hidden 
+				$("#samsung_tab4").hide();									// samsung tab's iframe is hidden 
+				$("#sctn5").css("background-image", "url(micromax-canvas-tab-p470.jpg)").hide();	//micromax tab picture is hidden 
+				$("#micromax_tab").hide();									//micromax tab's iframe is hidden 
+				$("#sctn").css("background-image", "url(iphone 5s ok.jpg)").hide();  // iphone picture is hidden 
+				$("#iphone").hide();           //iphone's iframe is hidden 
+				$("#sctn1").css("background-image", "url(Galaxy-S6-Edge ok.jpg)").hide();      //samsung picturen is hidden 
+				$("#samsung").hide();         //samsung's iframe is hidden 
+				$("#micromax").show();
+				$("#micromax").prop("src",link)
+				$("#sctn2").css("background-image", "url(MOBMI44.jpg)").show();
+				return false;
+			}
+		});
+		});
+	
+</script>
+</head>
+<body>
+	<header>
+		<span id="mobile-testing">Fluid Tester</span>
+	</header>
+	<div id="section">
+	<div id="mainContainer">
+		<div id="input-div">
+			<span id="enter-url">Enter URL</span>
+			<span id="url"><input type="text" id="txt" placeholder="Enter your URL here" class="form-control" value="http://"></span>
+		</div>
+		<div class="common-style">
+			<div class="common-style">
+					<select id="sel" class="form-control">
+						<option value="" disabled selected>Select the device</option>
+						<option value="iphone" id="i">iPhone 5s </option>
+						<option value="samsung" id="s"> Samsung Galaxy S6 edge+</option>
+						<option value="Micromax" id="m"> Micromax Canvas Silver 5</option>
+						<option value="iphonetab" id="air"> iPad Air 2</option>
+						<option value="samsung tab" id="st"> Samsung Galaxy Tab 4</option>
+						<option value="Micro tab" id="mt"> Micromax Canvas Tab P470</option>
+					</select>
+			</div>
+		</div>
+		</div>
+	</div>
+
+		<section id="sctn">
+		<center> <iframe id="iphone"> </iframe> </center> </section>
+			<div id="sctn1">
+				<center> <iframe id="samsung"> </iframe> </center>
+			</div> 
+			<div id="sctn2">
+				<center> <iframe id="micromax"> </iframe> </center>
+			</div>		
+			<div id="sctn3">
+				<center> <iframe id="ipad_air"> </iframe> </center>
+			</div>
+			<div id="sctn4">
+			<center> <iframe id="samsung_tab4"> </iframe></center>
+			</div>
+			<div id="sctn5">
+			<center> <iframe id="micromax_tab"> </iframe> </center>
+			</div>
+	</main>
+	</body>
+	</html>
