@@ -1,0 +1,340 @@
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+li{
+    margin: 8px 0;
+    display: block;
+}
+li a {
+    display: block;
+}
+
+.main-navbar {
+    position: relative;
+    background-color: #F44336;
+    color: white;
+    z-index: 10;
+}
+
+.main-navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 42px;
+}
+
+.main-navbar-content {
+    padding: 0.5px 16px;
+}
+
+.main-content {
+    position: relative;
+    margin-top: 42px;
+    padding: 1em;
+}
+
+.section {
+    margin: 1em auto;
+    margin-bottom: 3em !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.icon img {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.main-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+	background-color:#2e333b;
+    color: white;
+    width: 300px;
+}
+.main-sidebar .section {
+    margin: 1em 0;
+    margin-bottom: 2em !important;
+}
+
+.main-sidebar-right {
+    right: 0;
+    text-align: right;
+}
+.main-sidebar-left {
+    left: 0;
+    text-align: left;
+}
+
+[data-simplersidebar="sbwrapper"] {
+    padding: 1em;
+}
+
+.dynamic-right .main-navbar-content {
+    float: right;
+}
+
+.dynamic-left .main-navbar-content {
+    float: left;
+}
+
+.main-sidebar-wrapper {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top:1em ;
+	padding-left:15px;
+	cursor:pointer;
+}
+
+
+
+.header
+	{
+	background-color:#0084AD;
+	color:FEFEFE;
+	}
+.second 
+	{
+	background-color:FFFFFF;
+	}
+.button-height
+	{
+	height:33.5px;
+	}
+.common 
+	{
+	min-height:60px;
+	padding-top:12px;
+	}
+body 
+	{
+	font-family: 'Open Sans', sans-serif;
+	cursor:default;
+	overflow-x:visible;
+	}
+.l-align
+	{
+	text-align:left;
+	}
+td 
+	{
+	height:35px;
+	}
+td, th
+	{
+	padding-left:12px;
+	padding-top:7px;
+	}
+a 
+	{
+	color:white;
+	}
+a:hover
+	{
+	color:white;
+	text-decoration:none;
+	}
+tr
+	{
+	width:100%;
+	}
+#phone
+	{
+	background-color:#f6f6f6;
+	}
+::-webkit-scrollbar
+	 {
+	width: 0px;
+	}
+::-webkit-scrollbar-track-piece
+	 {
+	background-color: transparent;
+	}
+.iphone > .portrait
+	{
+	width:454px;
+	height:864px;
+	background-image:url("images/iphone 5s ok.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:34.0%;
+	}
+.samsung > .portrait
+	{
+	width:310px;
+	height:780px;
+	background-image:url("images/Galaxy-S6-Edge ok.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:37.4%;
+	}
+.ipad2 > .portrait
+	{
+	height:1390px;
+	width:972px;
+	background-image:url("images/ipad2.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:11%;
+	}
+.ipad-air2 > .portrait
+	{
+	width:810px;
+	height:1310px;
+	background-image:url("images/iPadAir2.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:18.9%;
+	}
+.samsung-tab > .portrait
+	{ 
+	width:450px;
+	height:915px;
+	background-image:url("images/Galaxy-Tab4-7.0.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:31.8%;
+	}
+.iphone > .portrait > .display
+	{
+	height:5.73in;
+	width:3.3455in;
+	margin-top:160px;
+	margin-left:14.9%;
+    border:1px solid #000000;
+	display:inline;
+	}
+.samsung > .portrait > .display 
+	{
+	height:4.83in;
+	width:2.685in;
+	margin-top:162px;
+	margin-left:8.7%;
+	border:1px solid #000000;
+	}
+.ipad2 > .portrait > .display
+	{
+	height:10.549in;
+	width:8.04in;
+	margin-top:163px;
+	margin-left:102px;
+	}
+.ipad-air2 > .portrait > .display 
+	{
+	height:10.75in;
+	width:7.03in;
+	margin-top:142px;
+	margin-left:8.1%;
+	border:1px solid #000000;
+	}
+.samsung-tab > .portrait > .display 
+	{
+	height:5.944in;
+	width:3.70in;
+	margin-top:170px;
+	margin-left:10.6%;
+	border:1px solid #000000;
+	}
+.iphone > .landscape
+	{
+	width:818px;
+	height:731px;
+	background-image:url("images/iphone 5s okL.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:18%;
+	}
+.samsung > .landscape 
+	{
+	width:610px;
+	height:630px;
+	background-image:url("images/Galaxy-S6-Edge okL.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:25.2%;
+	}
+.ipad2 > .landscape
+	{
+	width:1307px;
+	height:1020px;
+	background-image:url("images/ipad2 - L.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	}
+.ipad-air2 > .landscape
+	{
+	width:1276px;
+	height:810px;
+	background-image:url("images/iPadAir2L.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:0%;
+	}
+.samsung-tab > .landscape
+	{ 
+	width:730px;
+	height:750px;
+	background-image:url("images/Galaxy-Tab4-7.0L.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:17.5%;
+	}
+.iphone > .landscape > .display
+	{
+	height:3.5in;
+	width:5.752in;
+	margin-top:196px;
+	margin-left:16.6%;
+    border:1px solid #000000;
+	}
+.samsung > .landscape >.display
+	{
+	height:2.68in;
+	width:4.83in;
+	margin-top:186px;
+	margin-left:12.5%;
+	border:1px solid #000000;
+	}
+.ipad2 > .landscape > .display
+	{
+	height:8.04in;
+	width:10.588in;
+	margin-top:122px;
+	margin-left:121px;
+	}
+.ipad-air2 > .landscape > .display 
+	{
+	height:7.03in;
+	width:10.74in;
+	margin-top:69px;
+	margin-left:9.8%;
+	border:1px solid #000000;
+	}
+.samsung-tab > .landscape > .display 
+	{
+	height:3.70in;
+	width:5.95in;
+	margin-top:197px;
+	margin-left:10.6%;
+	border:1px solid #000000;
+	}
