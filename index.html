@@ -4,41 +4,308 @@
 <link rel="stylesheet" href="bootstrap.min.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap-theme.min.css">
-<link rel="stylesheet" href="style.css">
-
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<style>
+.header
+	{
+	background-color:#0084AD;
+	color:#A9CF54;
+	}
+.second 
+	{
+	background-color:rgba(44,35,27, 0.2);
+	}
+.button-height
+	{
+	height:32px;
+	}
+.common 
+	{
+	min-height:50px;
+	padding-top:8px;
+	}
+tr 
+	{
+	font-size:1.2em;
+	}
+#option
+	{
+	width:29%;
+	height:100%;
+	padding-left:15px;
+	padding-top:15px;
+	background-color:#B4D272;
+	position:absolute;
+	display:none;
+	}
+.iphone > .portrait
+	{
+	width:250px;
+	height:650px;
+	background-image:url("images/iphone 5s ok.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:39.9%;
+	}
+.samsung > .portrait
+	{
+	width:310px;
+	height:780px;
+	background-image:url("images/Galaxy-S6-Edge ok.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:37.4%;
+	}
+.ipad > .portrait
+	{
+	width:670px;
+	height:1113px;
+	background-image:url("images/195514.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:22.9%;
+	}
+.samsung-tab > .portrait
+	{ 
+	width:450px;
+	height:915px;
+	background-image:url("images/Galaxy-Tab4-7.0.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:31.8%;
+	}
+.iphone > .portrait > .display
+	{
+	height:3.465in;
+	width:1.94in;
+	margin-top:160px;
+	margin-left:13.3%;
+    border:1px solid #000000;
+	}
+.samsung > .portrait > .display 
+	{
+	height:4.83in;
+	width:2.685in;
+	margin-top:162px;
+	margin-left:8.7%;
+	border:1px solid #000000;
+	}
+.ipad > .portrait > .display 
+	{
+	height:7.88in;
+	width:5.87in;
+	margin-top:179px;
+	margin-left:8%;
+	border:1px solid #000000;
+	}
+.samsung-tab > .portrait > .display 
+	{
+	height:5.944in;
+	width:3.70in;
+	margin-top:170px;
+	margin-left:10.6%;
+	border:1px solid #000000;
+	}
+.iphone > .landscape
+	{
+	width:494px;
+	height:580px;
+	background-image:url("images/iphone 5s okL.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:30%;
+	}
+.samsung > .landscape 
+	{
+	width:610px;
+	height:630px;
+	background-image:url("images/Galaxy-S6-Edge okL.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:25.2%;
+	}
+.ipad > .landscape
+	{
+	width:945px;
+	height:935px;
+	background-image:url("images/195514L.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:11.7%;
+	}
+.samsung-tab > .landscape
+	{ 
+	width:730px;
+	height:750px;
+	background-image:url("images/Galaxy-Tab4-7.0L.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:17.5%;
+	}
+.iphone > .landscape > .display
+	{
+	height:1.936in;
+	width:3.465in;
+	margin-top:196px;
+	margin-left:16.6%;
+    border:1px solid #000000;
+	}
+.samsung > .landscape >.display
+	{
+	height:2.68in;
+	width:4.83in;
+	margin-top:186px;
+	margin-left:12.5%;
+	border:1px solid #000000;
+	}
+.ipad > .landscape > .display 
+	{
+	height:5.87in;
+	width:7.88in;
+	margin-top:185px;
+	margin-left:9.9%;
+	border:1px solid #000000;
+	}
+.samsung-tab > .landscape > .display 
+	{
+	height:3.70in;
+	width:5.95in;
+	margin-top:197px;
+	margin-left:10.6%;
+	border:1px solid #000000;
+	}
+</style>
 <script src="jquery.min.js"> </script>
 <script src="bootstrap.min.js"></script>
 <script src="bs-glyphicons-data-generator.js"></script>
-<script src="jquery-ui.min.js"> </script>
-<script src="jquery.simpler-sidebar.min.js"> </script>
-<script src="index.js"> </script>
+<script>
+	$(document).ready(function(){			
+		function MyFunction()
+			{
+				var link =$("#txt").val();
+				$("#display").prop("src",link)					
+				var storedUrl = localStorage.getItem("url");					
+				localStorage.setItem("url", storedUrl)
+				var urls = storedUrl.split(",");					
+				for (var index=0; index < urls.length; index++)
+					{
+						if (link == urls[index])
+							{ 
+								var afterSplice = urls.splice(index, 1);				
+								var insertInZerothIndex = urls.splice(0,0, link);
+								localStorage.setItem("url", urls);
+								return false;
+							}			
+					}	
+					urls.push(link);					
+					alert("after pushing "+ urls);				
+					localStorage.setItem("url", urls);
+			} 
+			
+			
+		$("#txt").keypress(function(e){
+		var key=e.which;
+		if (key == 13)
+			{
+				MyFunction();
+			}
+		});
+		
+		
+			$(".input-group-btn").click(function(){
+				MyFunction();
+			});
+		
+		
+		$("#sel").change(function(){
+			var link=$("#txt").val();
+			if (!link == null) 
+			{
+				$("#phone").removeClass();
+				$("#phone").addClass($(this).val());
+				$("#display").prop("src",link)
+			}
+			else 
+			{
+				$("#phone").removeClass();
+				$("#phone").addClass($(this).val());
+			}
+		});
+		
+		
+		$("#txt").on("paste", function(){
+		setTimeout(function(){
+			MyFunction();
+			});
+		});
+		
+		
+		$("#landscape").click(function(){
+			$("#rotate").removeClass();
+				$("#rotate").addClass("landscape");
+		});
+		
+		
+			$("#portrait").click(function(){
+				$("#rotate").removeClass();
+					$("#rotate").addClass("portrait");
+			});
+	
+	
+				$(".option-btn").click(function(){
+				var storedUrl = localStorage.getItem("url");
+				if (storedUrl == null)
+					{						
+						var onloadlink = $("#txt").val();						
+						storedUrl = [];					
+						storedUrl.push(onloadlink);					
+					}					
+						localStorage.setItem("url", storedUrl);
+						var urls = storedUrl.split(",");
+						var generatedHtml = "";
+						for (var index=0; index < urls.length; index++)
+							{
+								generatedHtml += "<tr><td><a>";
+								generatedHtml += urls[index];
+								generatedHtml += "</a></td></tr>";
+								generatedHtml += "</br>";
+							}
+						$("#option").html(generatedHtml);
+						$("#option").toggle("slow");
+						
+							$("a").click(function(){
+						//	alert($(this).text());
+							var cachelink = $(this).text();
+							$("#display").prop("src",cachelink)
+							$("#txt").val(cachelink);
+							//	alert("link set")
+							});
+					});	
+	});
+</script>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row header">
-			<div class="col-md-12 l-align">
-				<p><h3>  Mobile Testing  </h3> </p>
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-8">
+				<p><h3><b> Mobile Testing </b></h3> </p>
 			</div>
 		</div>
 		<div class="row second common">
 			<div class="col-md-1">
-				  <div class="main-navbar-content">
-					 <div id="toggle-sidebar">
-						<span class="optn-btn">
-							<button class="btn btn-default btn button-height" type="button"> <span class="glyphicon glyphicon-menu-hamburger"/></button>
-						</span>
-					</div>
-				</div>
+				<span class="option-btn">
+					<button class="btn btn-default btn button-height" type="button"> <span class="glyphicon glyphicon-menu-hamburger"/></button>
+				</span>
 			</div>
 			<div class="col-md-2">
-				<center>	<p><h4> Enter URL </h4></p> </center>
+			<center>	<p><h4> Enter URL </h4></p> </center>
 			</div>
 			<div class="col-md-4">
 				<div class="input-group">
 					<input type="text" id="txt" class="form-control" value="http://www.w3schools.com">
 						<span class="input-group-btn">
-							<button class="btn btn-default btn button-height" type="button"> <span class="glyphicon glyphicon-play"/></button>
+							<button class="btn btn-default btn button-height" type="button"> <span class="glyphicon glyphicon-send"/></button>
 						</span>
 				</div>
 			</div>
@@ -47,15 +314,14 @@
 						<option value="" disabled selected>Select the device</option>
 						<option value="iphone" selected="selected">iPhone 5s </option>
 						<option value="samsung"> Samsung Galaxy S6 edge+</option>
-						<option value="ipad2"> iPad2</option>
-						<option value="ipad-air2"> iPad Air 2</option>
+						<option value="ipad"> iPad Air 2</option>
 						<option value="samsung-tab"> Samsung Galaxy Tab 4</option>
 				</select>
 			</div>	
 			<div class="col-md-2">
 					<div class="btn-group">
 						<button type="button" id="btn" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Orientation <span class="caret"> </span>
+							Transform <span class="caret"> </span>
 						</button> 
 						<ul class="dropdown-menu">	
 							<li> <a href ="#" id="portrait">Portrait </a></li>
@@ -66,14 +332,12 @@
 		</div>
 		<div class="row">
 				<div class="col-md-12">	
-					 <div id="main-sidebar" class="main-sidebar main-sidebar-left">
-						<div id="main-sidebar-wrapper" class="main-sidebar-wrapper">
-							<table>
-								<tr>
-									<td></td>
-								</tr>
-							</table>
-						</div>
+					<div id="option">
+						<table>
+							<tr>
+							<td> </td>
+							</tr>
+						</table>
 					</div>
 						<div id="phone" class="iphone">
 							<div id="rotate" class="portrait">
