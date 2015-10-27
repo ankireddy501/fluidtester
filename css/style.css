@@ -183,7 +183,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:454px;
 	height:864px;
-	background-image:url("images/iphone 5s ok.png");
+	background-image:url("../images/iphone 5s ok.png");
 	background-repeat:no-repeat;
 	background-position:center; 
 	}
@@ -192,7 +192,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:310px;
 	height:780px;
-	background-image:url("images/Galaxy-S6-Edge ok.jpg");
+	background-image:url("../images/Galaxy-S6-Edge ok.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -201,7 +201,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:454px;
 	height:864px;
-	background-image:url("images/nexus4.png");
+	background-image:url("../images/nexus4.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -210,7 +210,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:504px;
 	height:864px;
-	background-image:url("images/motorola-moto-G.png");
+	background-image:url("../images/motorola-moto-G.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -219,7 +219,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	height:1390px;
 	width:972px;
-	background-image:url("images/ipad2.png");
+	background-image:url("../images/ipad2.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -228,7 +228,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:810px;
 	height:1310px;
-	background-image:url("images/iPadAir2.png");
+	background-image:url("../images/iPadAir2.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -237,7 +237,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:1185px;
 	height:1564px;
-	background-image:url("images/Galaxy-Tab4-10.1-SM-T530-Black_1.png");
+	background-image:url("../images/Galaxy-Tab4-10.1-SM-T530-Black_1.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -311,7 +311,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:818px;
 	height:731px;
-	background-image:url("images/iphone 5s okL.jpg");
+	background-image:url("../images/iphone 5s okL.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -320,7 +320,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:610px;
 	height:630px;
-	background-image:url("images/Galaxy-S6-Edge okL.jpg");
+	background-image:url("../images/Galaxy-S6-Edge okL.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -329,7 +329,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:860px;
 	height:731px;
-	background-image:url("images/nexus4L.png");
+	background-image:url("../images/nexus4L.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -338,7 +338,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:935px;
 	height:731px;
-	background-image:url("images/motorola-moto-GL.png");
+	background-image:url("../images/motorola-moto-GL.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -347,7 +347,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:1307px;
 	height:1020px;
-	background-image:url("images/ipad2 - L.png");
+	background-image:url("../images/ipad2 - L.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -356,7 +356,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:1276px;
 	height:810px;
-	background-image:url("images/iPadAir2L.png");
+	background-image:url("../images/iPadAir2L.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
@@ -365,7 +365,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	width:1565px;
 	height:1185px;
-	background-image:url("images/Galaxy-Tab4-10.1-SM-T530-Black_1L.png");
+	background-image:url("../images/Galaxy-Tab4-10.1-SM-T530-Black_1L.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
