@@ -104,7 +104,6 @@ li a {
     padding-top:1em ;
 	padding-left:15px;
 	cursor:pointer;
-	width:278px;
 }
 
 
@@ -137,6 +136,15 @@ body
 	{
 	text-align:left;
 	}
+td 
+	{
+	height:35px;
+	}
+td, th
+	{
+	padding-left:12px;
+	padding-top:7px;
+	}
 a 
 	{
 	color:white;
@@ -146,205 +154,127 @@ a:hover
 	color:white;
 	text-decoration:none;
 	}
-.navigation li 
-	{
-	overflow:hidden;
-	text-overflow:ellipsis;
-	height:23px;
-	}
-.device-row
-	{
-	background-color:#f6f6f6;
-	}
-#display::-webkit-scrollbar
-	 {
-	width: 0px;
-	}
-#display::-webkit-scrollbar-track-piece
-	 {
-	background-color: transparent;
-	}
-#display::-webkit-scrollbar-thumb
-	 {
-	border-radius: 25px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: lightgrey;
-	}
-#phone
-	{
-	transform:scale(0.85,0.85);
-	}
-.samsung-tab
+tr
 	{
 	width:100%;
 	}
+#phone
+	{
+	background-color:#f6f6f6;
+	}
+::-webkit-scrollbar
+	 {
+	width: 0px;
+	}
+::-webkit-scrollbar-track-piece
+	 {
+	background-color: transparent;
+	}
 .iphone > .portrait
 	{
-	-webkit-transition: 0.5s ease-in;
 	width:454px;
 	height:864px;
 	background-image:url("images/iphone 5s ok.png");
 	background-repeat:no-repeat;
-	background-position:center; 
+	background-position:center;
+	margin-left:34.0%;
 	}
 .samsung > .portrait
 	{
-	-webkit-transition: 0.5s ease-in;
 	width:310px;
 	height:780px;
 	background-image:url("images/Galaxy-S6-Edge ok.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
-	}
-.nexus4 > .portrait
-	{
-	-webkit-transition: 0.5s ease-in;
-	width:454px;
-	height:864px;
-	background-image:url("images/nexus4.png");
-	background-repeat:no-repeat;
-	background-position:center;
-	}
-.moto-g > .portrait
-	{
-	-webkit-transition: 0.5s ease-in;
-	width:504px;
-	height:864px;
-	background-image:url("images/motorola-moto-G.png");
-	background-repeat:no-repeat;
-	background-position:center;
+	margin-left:37.4%;
 	}
 .ipad2 > .portrait
 	{
-	-webkit-transition: 0.5s ease-in;
 	height:1390px;
 	width:972px;
 	background-image:url("images/ipad2.png");
 	background-repeat:no-repeat;
 	background-position:center;
+	margin-left:11%;
 	}
 .ipad-air2 > .portrait
 	{
-	-webkit-transition: 0.5s ease-in;
 	width:810px;
 	height:1310px;
 	background-image:url("images/iPadAir2.png");
 	background-repeat:no-repeat;
 	background-position:center;
+	margin-left:18.9%;
 	}
 .samsung-tab > .portrait
 	{ 
-	-webkit-transition: 0.5s ease-in;
-	width:1185px;
-	height:1564px;
-	background-image:url("images/Galaxy-Tab4-10.1-SM-T530-Black_1.png");
+	width:450px;
+	height:915px;
+	background-image:url("images/Galaxy-Tab4-7.0.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
+	margin-left:31.8%;
 	}
 .iphone > .portrait > .display
 	{
-	-webkit-transition: 0.5s ease-in;
 	height:5.73in;
-	width:3.34in;
+	width:3.3455in;
 	margin-top:160px;
-	margin-left:1%;
-    border:transparent;
+	margin-left:14.9%;
+    border:1px solid #000000;
 	display:inline;
 	}
 .samsung > .portrait > .display 
 	{
-	-webkit-transition: 0.5s ease-in;
 	height:4.83in;
 	width:2.685in;
 	margin-top:162px;
-	margin-left:0%;
-	border:transparent;
-	}
-.nexus4 > .portrait > .display
-	{
-	-webkit-transition: 0.5s ease-in;
-	height:5.79in;
-	width:3.325in;
-	margin-top:138px;
-    border:transparent;
-	display:inline;
-	}
-.moto-g > .portrait > .display
-	{
-	-webkit-transition: 0.5s ease-in;
-	height:6.442in;
-	width:4.15in;
-	margin-top:120px;
-	margin-left:3.4%;
-    border:transparent;
-	display:inline;
+	margin-left:8.7%;
+	border:1px solid #000000;
 	}
 .ipad2 > .portrait > .display
 	{
-	-webkit-transition: 0.5s ease-in;
-	height:10.57in;
-	width:8.02in;
+	height:10.549in;
+	width:8.04in;
 	margin-top:163px;
-	margin-left:0.4%;
-	border:transparent;
+	margin-left:102px;
 	}
 .ipad-air2 > .portrait > .display 
 	{
-	-webkit-transition: 0.5s ease-in;
 	height:10.75in;
-	width:7.02in;
+	width:7.03in;
 	margin-top:142px;
-	margin-right:0.5%;
-	border:transparent;
+	margin-left:8.1%;
+	border:1px solid #000000;
 	}
 .samsung-tab > .portrait > .display 
 	{
-	-webkit-transition: 0.5s ease-in;
-	height:14.41in;
-	width:9.186in;
-	margin-top:88px;
-	margin-right:0.5%;
-	border:transparent;
+	height:5.944in;
+	width:3.70in;
+	margin-top:170px;
+	margin-left:10.6%;
+	border:1px solid #000000;
 	}
 .iphone > .landscape
 	{
-	-webkit-transition: 0.5s ease-in;
 	width:818px;
 	height:731px;
 	background-image:url("images/iphone 5s okL.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
+	margin-left:18%;
 	}
 .samsung > .landscape 
 	{
-	-webkit-transition: 0.5s ease-in;
 	width:610px;
 	height:630px;
 	background-image:url("images/Galaxy-S6-Edge okL.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
-	}
-.nexus4 > .landscape
-	{
-	-webkit-transition: 0.5s ease-in;
-	width:860px;
-	height:731px;
-	background-image:url("images/nexus4L.png");
-	background-repeat:no-repeat;
-	background-position:center;
-	}
-.moto-g > .landscape
-	{
-	-webkit-transition: 0.5s ease-in;
-	width:935px;
-	height:731px;
-	background-image:url("images/motorola-moto-GL.png");
-	background-repeat:no-repeat;
-	background-position:center;
+	margin-left:25.2%;
 	}
 .ipad2 > .landscape
 	{
-	-webkit-transition: 0.5s ease-in;
 	width:1307px;
 	height:1020px;
 	background-image:url("images/ipad2 - L.png");
@@ -353,82 +283,58 @@ a:hover
 	}
 .ipad-air2 > .landscape
 	{
-	-webkit-transition: 0.5s ease-in;
 	width:1276px;
 	height:810px;
 	background-image:url("images/iPadAir2L.png");
 	background-repeat:no-repeat;
 	background-position:center;
+	margin-left:0%;
 	}
 .samsung-tab > .landscape
 	{ 
-	-webkit-transition: 0.5s ease-in;
-	width:1565px;
-	height:1185px;
-	background-image:url("images/Galaxy-Tab4-10.1-SM-T530-Black_1L.png");
+	width:730px;
+	height:750px;
+	background-image:url("images/Galaxy-Tab4-7.0L.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
+	margin-left:17.5%;
 	}
 .iphone > .landscape > .display
 	{
-	-webkit-transition: 0.5s ease-in;
 	height:3.5in;
-	width:5.745in;
+	width:5.752in;
 	margin-top:196px;
-	margin-left:0.8%;
-    border:transparent;
+	margin-left:16.6%;
+    border:1px solid #000000;
 	}
 .samsung > .landscape >.display
 	{
-	-webkit-transition: 0.5s ease-in;
 	height:2.68in;
 	width:4.83in;
 	margin-top:186px;
-	margin-left:1.2%;
-	border:transparent;
-	}
-.nexus4 > .landscape > .display
-	{
-	-webkit-transition: 0.5s ease-in;
-	height:3.12in;
-	width:5.93in;
-	margin-top:227px;
-	margin-right:5.5%;
-    border:transparent;
-	}
-.moto-g > .landscape > .display
-	{
-	-webkit-transition: 0.5s ease-in;
-	height:3.8in;
-	width:6.84in;
-	margin-top:189px;
-	margin-right:5.2%;
-    border:transparent;
+	margin-left:12.5%;
+	border:1px solid #000000;
 	}
 .ipad2 > .landscape > .display
 	{
-	-webkit-transition: 0.5s ease-in;
 	height:8.04in;
-	width:10.575in;
+	width:10.588in;
 	margin-top:122px;
-	margin-right:50px;
-	border:transparent;
+	margin-left:121px;
 	}
 .ipad-air2 > .landscape > .display 
 	{
-	-webkit-transition: 0.5s ease-in;
 	height:7.03in;
-	width:10.745in;
+	width:10.74in;
 	margin-top:69px;
-	margin-left:0.3%;
-	border:transparent;
+	margin-left:9.8%;
+	border:1px solid #000000;
 	}
 .samsung-tab > .landscape > .display 
 	{
-	-webkit-transition: 0.5s ease-in;
-	height:9.186in;
-	width:14.42in;
-	margin-top:150px;
-	margin-left:0.2%;
-	border:transparent;
+	height:3.70in;
+	width:5.95in;
+	margin-top:197px;
+	margin-left:10.6%;
+	border:1px solid #000000;
 	}

@@ -9,15 +9,16 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <script src="jquery.min.js"> </script>
 <script src="bootstrap.min.js"></script>
+<script src="bs-glyphicons-data-generator.js"></script>
 <script src="jquery-ui.min.js"> </script>
-<script src="jquery.simpler-sidebar.js"></script>
+<script src="jquery.simpler-sidebar.min.js"> </script>
 <script src="index.js"> </script>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row header">
 			<div class="col-md-12 l-align">
-				<p><h3>   Fluid Tester  </h3> </p>
+				<p><h3>  Mobile Testing  </h3> </p>
 			</div>
 		</div>
 		<div class="row second common">
@@ -35,9 +36,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="input-group">
-					<div class="form-group">
-						<input type="text" id="txt" class="form-control"> 
-					</div>
+					<input type="text" id="txt" class="form-control" value="http://www.w3schools.com">
 						<span class="input-group-btn">
 							<button class="btn btn-default btn button-height" type="button"> <span class="glyphicon glyphicon-play"/></button>
 						</span>
@@ -48,8 +47,6 @@
 						<option value="" disabled selected>Select the device</option>
 						<option value="iphone" selected="selected">iPhone 5s </option>
 						<option value="samsung"> Samsung Galaxy S6 edge+</option>
-						<option value="nexus4">LG Nexus 4 </option>
-						<option value="moto-g">Moto G </option>
 						<option value="ipad2"> iPad2</option>
 						<option value="ipad-air2"> iPad Air 2</option>
 						<option value="samsung-tab"> Samsung Galaxy Tab 4</option>
@@ -67,19 +64,22 @@
 					</div>
 			</div>
 		</div>
-		<div class="row device-row">
-				<div class="col-md-12 cls">	
+		<div class="row">
+				<div class="col-md-12">	
 					 <div id="main-sidebar" class="main-sidebar main-sidebar-left">
 						<div id="main-sidebar-wrapper" class="main-sidebar-wrapper">
-							<ul id= "history-url" class="navigation">
-							</ul>
+							<table>
+								<tr>
+									<td></td>
+								</tr>
+							</table>
 						</div>
 					</div>
-				<center>		<div id="phone">
-							<div id="rotate">
-								<iframe id="display" class="display"></iframe> 
+						<div id="phone" class="iphone">
+							<div id="rotate" class="portrait">
+								<iframe id="display" class="display" src="http://www.w3schools.com"></iframe> 
 							</div>
-						</div>		</center>
+						</div>	
 				</div>
 		</div>
 	</div>
