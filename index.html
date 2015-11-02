@@ -45,14 +45,22 @@
 			</div>
 			<div class="col-md-3">
 				<select id="sel" class="form-control">
-						<option value="" disabled selected>Select the device</option>
+						<option value="1" disabled selected>Select the device</option>
+						<optgroup label="Phones"> 
 						<option value="iphone" selected="selected">iPhone 5s </option>
-						<option value="samsung"> Samsung Galaxy S6 edge+</option>
+						<option value="iphone6"> iPhone 6</option>
+						<option value="iphone6-plus"> iPhone 6 plus</option>
 						<option value="nexus4">LG Nexus 4 </option>
 						<option value="moto-g">Moto G </option>
+						</optgroup>
+						<optgroup label="Tablets">
 						<option value="ipad2"> iPad2</option>
 						<option value="ipad-air2"> iPad Air 2</option>
 						<option value="samsung-tab"> Samsung Galaxy Tab 4</option>
+						</optgroup>
+						<optgroup label="Custom">
+						<option value="custom" data-toggle="modal"> Custom device</option>   
+						</optgroup>
 				</select>
 			</div>	
 			<div class="col-md-2">
@@ -61,10 +69,27 @@
 							Orientation <span class="caret"> </span>
 						</button> 
 						<ul class="dropdown-menu">	
-							<li> <a href ="#" id="portrait">Portrait </a></li>
-							<li> <a href ="#" id="landscape">Landscape </a></li>
+							<li> <a href ="#" id="portrait" value="port">Portrait </a></li>
+							<li> <a href ="#" id="landscape" value="land">Landscape </a></li>
 						</ul>
 					</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Custom device</h4>
+					</div>
+					<div class="modal-body">
+						 <input type="text" placeholder="width in pixels" class="form-control width" autofocus>
+						 <input type="text" placeholder="height in pixels" class="form-control height">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success ok-btn" data-dismiss="modal">ok</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row device-row">
@@ -75,11 +100,12 @@
 							</ul>
 						</div>
 					</div>
-				<center>		<div id="phone">
-							<div id="rotate">
-								<iframe id="display" class="display"></iframe> 
-							</div>
-						</div>		</center>
+				<center> <div id="phone">
+								<div id="rotate">
+									<iframe id="display" class="display"></iframe> 
+								</div>
+						 </div>	
+				</center>
 				</div>
 		</div>
 	</div>

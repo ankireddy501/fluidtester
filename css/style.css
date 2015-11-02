@@ -187,23 +187,33 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center; 
 	}
-.samsung > .portrait
+.iphone6 > .portrait
 	{
 	-webkit-transition: 0.5s ease-in;
-	width:310px;
-	height:780px;
-	background-image:url("../images/Galaxy-S6-Edge ok.jpg");
+	width:460px;
+	height:928px;
+	background-image:url("../images/iphone_6.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	}
+.iphone6-plus > .portrait
+	{
+	-webkit-transition: 0.5s ease-in;
+	width:517px;
+	height:1030px;
+	background-image:url("../images/iphone_6_plus.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
 .nexus4 > .portrait
 	{
 	-webkit-transition: 0.5s ease-in;
-	width:454px;
-	height:864px;
+	width:518px;
+	height:966px;
 	background-image:url("../images/nexus4.png");
 	background-repeat:no-repeat;
 	background-position:center;
+	margin-left:0.25%;
 	}
 .moto-g > .portrait
 	{
@@ -241,6 +251,11 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center;
 	}
+.custom > .portrait
+	{
+	-webkit-transition: 0.5s ease-in;
+	border-radius:30px;
+	}
 .iphone > .portrait > .display
 	{
 	-webkit-transition: 0.5s ease-in;
@@ -251,22 +266,31 @@ a:hover
     border:transparent;
 	display:inline;
 	}
-.samsung > .portrait > .display 
+.iphone6 > .portrait > .display 
 	{
 	-webkit-transition: 0.5s ease-in;
-	height:4.83in;
-	width:2.685in;
-	margin-top:162px;
-	margin-left:0%;
+	height:6.936in;
+	width:3.96in;
+	margin-top:132px;
+	margin-left:2.5%;
+	border:transparent;
+	}
+.iphone6-plus > .portrait > .display 
+	{
+	-webkit-transition: 0.5s ease-in;
+	height:7.71in;
+	width:4.36in;
+	margin-top:144px;
+	margin-right:0.5%;
 	border:transparent;
 	}
 .nexus4 > .portrait > .display
 	{
 	-webkit-transition: 0.5s ease-in;
-	height:5.79in;
-	width:3.325in;
+	height:6.8in;
+	width:4.455in;
 	margin-top:138px;
-    border:transparent;
+    border:1px solid black;
 	display:inline;
 	}
 .moto-g > .portrait > .display
@@ -306,29 +330,48 @@ a:hover
 	margin-right:0.5%;
 	border:transparent;
 	}
+.custom > .portrait > .display
+	{
+	-webkit-transition: 0.5s ease-in;
+	display:none;
+	position:absolute;
+	margin-left:50px;
+	margin-top:50px;
+	background-color:white;
+	border:transparent;
+	}
 .iphone > .landscape
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:818px;
-	height:731px;
+	height:590px;
 	background-image:url("../images/iphone 5s okL.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
-.samsung > .landscape 
+.iphone6 > .landscape 
 	{
 	-webkit-transition: 0.5s ease-in;
-	width:610px;
+	width:900px;
 	height:630px;
-	background-image:url("../images/Galaxy-S6-Edge okL.jpg");
+	background-image:url("../images/iphone_6L.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	}
+.iphone6-plus > .landscape 
+	{
+	-webkit-transition: 0.5s ease-in;
+	width:1030px;
+	height:652px;
+	background-image:url("../images/iphone_6_plus- L.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	}
 .nexus4 > .landscape
 	{
 	-webkit-transition: 0.5s ease-in;
-	width:860px;
-	height:731px;
+	width:990px;
+	height:655px;
 	background-image:url("../images/nexus4L.png");
 	background-repeat:no-repeat;
 	background-position:center;
@@ -337,7 +380,7 @@ a:hover
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:935px;
-	height:731px;
+	height:650px;
 	background-image:url("../images/motorola-moto-GL.png");
 	background-repeat:no-repeat;
 	background-position:center;
@@ -369,31 +412,45 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center;
 	}
+.custom > .landscape
+	{
+	-webkit-transition: 0.5s ease-in;
+	border-radius:30px;
+	}
 .iphone > .landscape > .display
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:3.5in;
-	width:5.745in;
-	margin-top:196px;
+	width:5.744in;
+	margin-top:125px;
 	margin-left:0.8%;
     border:transparent;
 	}
-.samsung > .landscape >.display
+.iphone6 > .landscape >.display
 	{
 	-webkit-transition: 0.5s ease-in;
-	height:2.68in;
-	width:4.83in;
-	margin-top:186px;
-	margin-left:1.2%;
+	height:3.96in;
+	width:6.93in;
+	margin-top:119px;
+	margin-left:0.2%;
+	border:transparent;
+	}
+.iphone6-plus > .landscape >.display
+	{
+	-webkit-transition: 0.5s ease-in;
+	height:4.38in;
+	width:7.68in;
+	margin-top:117px;
+	margin-left:0.1%;
 	border:transparent;
 	}
 .nexus4 > .landscape > .display
 	{
 	-webkit-transition: 0.5s ease-in;
-	height:3.12in;
-	width:5.93in;
-	margin-top:227px;
-	margin-right:5.5%;
+	height:4.45in;
+	width:6.797in;
+	margin-top:114px;
+	margin-right:3.78%;
     border:transparent;
 	}
 .moto-g > .landscape > .display
@@ -401,7 +458,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	height:3.8in;
 	width:6.84in;
-	margin-top:189px;
+	margin-top:148px;
 	margin-right:5.2%;
     border:transparent;
 	}
@@ -431,4 +488,14 @@ a:hover
 	margin-top:150px;
 	margin-left:0.2%;
 	border:transparent;
+	}
+.custom > .landscape > .display
+	{
+	-webkit-transition: 0.5s ease-in;
+	display:none;
+	position:absolute;
+	margin-left:50px;
+	margin-top:50px;
+	border:transparent;
+	background-color:white;
 	}

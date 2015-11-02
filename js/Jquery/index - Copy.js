@@ -55,9 +55,6 @@
 			if ($(this).val() == "custom")
 			{
 				$("#myModal").modal('show');
-				setTimeout(function(){
-					$("#sel").val("1");
-				},1500);
 				$(".width").keydown(function(a){
 				var key1=a.which;
 				if (key1 == 40)
@@ -75,14 +72,7 @@
 				});
 				
 				$(".ok-btn").click(function(){
-				if ($("#rotate").hasClass("portrait"))
-				{
-					setHeightAndWidthPort();
-				}
-				else
-				{
-					setHeightAndWidthLand();
-				}
+				setHeightAndWidthPort();
 				});
 				
 				$(".height").keypress(function(c){
@@ -90,14 +80,7 @@
 				if (key3 == 13)
 				{
 					$("#myModal").modal('hide');
-						if ($("#rotate").hasClass("portrait"))
-						{
-							setHeightAndWidthPort();
-						}
-						else
-						{
-							setHeightAndWidthLand();
-						}
+					setHeightAndWidthPort();
 				}
 				});
 			}
@@ -115,6 +98,10 @@
 					$(".custom > .portrait").css('width', parseInt(wid) +100);
 					$(".custom > .portrait").css('height', parseInt(heigh) +100);
 					$(".custom > .portrait").css('background-color', 'black');
+				}
+				else
+				{
+				
 				}
 			}
 			
