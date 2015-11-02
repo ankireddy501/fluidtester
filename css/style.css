@@ -219,7 +219,7 @@ a:hover
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:504px;
-	height:864px;
+	height:890px;
 	background-image:url("../images/motorola-moto-G.png");
 	background-repeat:no-repeat;
 	background-position:center;
@@ -298,7 +298,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	height:6.442in;
 	width:4.15in;
-	margin-top:120px;
+	margin-top:133px;
 	margin-left:3.4%;
     border:transparent;
 	display:inline;
