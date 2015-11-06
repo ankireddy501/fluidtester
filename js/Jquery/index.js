@@ -37,6 +37,7 @@
 			$("#rotate").removeAttr("style");
 			$("#display").removeAttr("style");
 			var link=$("#txt").val();
+		//	alert($("#sel").val());		
 			if (!link == null) 
 			{
 				$("#phone").removeClass();
@@ -54,43 +55,26 @@
 			if ($(this).val() == "custom")
 			{
 				$("#myModal").modal('show');
-				$(".name").focus();
-				if ($("#cd").closest(".form-group").hasClass("has-error"))
-				{
-					$("#cd").closest(".form-group").removeClass("has-error");
-				}
 				setTimeout(function(){
 					$("#sel").val("1");
-				},1000);
-				nameKeyDown();
-				widthKeyUp();
-				widthKeyDown();
-				heightKeyDown();
-				$(".ok-btn").click(function(){
-				//	var customName = $(".name").val();
-					pushingIntoOptions();
-				});
-				
-				$(".height").keypress(function(c){
-				var key3=c.which;
-				if (key3 == 13)
+				},1500);
+				$(".width").keydown(function(a){
+				var key1=a.which;
+				if (key1 == 40)
 				{
-					pushingIntoOptions();
+					$(".height").focus();
 				}
 				});
-			}
-			else
-			{
-				setCustomDimensions();			
-			}
-		});
-		function pushingIntoOptions()
-		{
-			var customName = $(".name").val();
-			if (validateCustomDeviceName(customName))
-			{
-				$("#myModal").modal('hide');
 				
+				$(".height").keydown(function(b){
+				var key2=b.which;
+				if (key2 == 38)
+				{
+					$(".width").focus();
+				}
+				});
+				
+				$(".ok-btn").click(function(){
 				if ($("#rotate").hasClass("portrait"))
 				{
 					setHeightAndWidthPort();
@@ -99,76 +83,30 @@
 				{
 					setHeightAndWidthLand();
 				}
+				});
 				
-				deviceCache();
-				
-				var storedDevice = localStorage.getItem("custom_device");
-				var obj = JSON.parse(storedDevice); 
-				var options = "";
-				for (var index=0; index < obj.length; index++)
+				$(".height").keypress(function(c){
+				var key3=c.which;
+				if (key3 == 13)
 				{
-					if (cacheValidate(obj[index].name))
-					{
-						options += "<option>";
-						options += obj[index].name;
-						options += "</option>"; 
-					}
+					$("#myModal").modal('hide');
+						if ($("#rotate").hasClass("portrait"))
+						{
+							setHeightAndWidthPort();
+						}
+						else
+						{
+							setHeightAndWidthLand();
+						}
 				}
-				
-				$("#sel > .user_defined").append(options);
+				});
 			}
-		}
-		
-		function nameKeyDown()
-		{
-			$(".name").keydown(function(k){
-			var key4 = k.which;
-			if (key4 == 40)
-			{
-				$(".width").focus();
-			}
-			});
-		}
-		
-		function widthKeyDown()
-		{
-			$(".width").keydown(function(a){
-			var key1=a.which;
-			if (key1 == 40)
-			{
-				$(".height").focus();
-			}
-			});
-		}
-		
-		function widthKeyUp()
-		{
-			$(".width").keydown(function(l){
-			var key5 = l.which;
-			if (key5 == 38)
-			{
-				$(".name").focus();
-			}
-			});
-		}
-		
-		function heightKeyDown()
-		{
-			$(".height").keydown(function(b){
-			var key2=b.which;
-			if (key2 == 38)
-			{
-				$(".width").focus();
-			}
-			});
-		}
-		
+		});
 		
 		function setHeightAndWidthPort()
 			{
 				var wid = $(".width").val();
 				var heigh = $(".height").val();
-				var nme = $(".name").val();
 				if (wid && heigh != null)
 				{
 					$(".custom > .portrait > .display").prop('width', wid);
@@ -184,7 +122,6 @@
 		{
 			var wid = $(".width").val();
 			var heigh = $(".height").val();
-			var nme = $(".name").val();
 			if (wid && heigh != null)
 			{
 				$(".custom > .landscape > .display").prop('width', heigh);
@@ -196,39 +133,11 @@
 			}
 		}
 		
-		function setCustomDimensions()
-		{
-			var storedDevice = localStorage.getItem("custom_device");
-			var obj = JSON.parse(storedDevice); 
-			for (var index=0; index < obj.length; index++)
-			{	
-				if ($("#sel").val() == obj[index].name)
-				{
-					if ($("#rotate").hasClass("portrait"))
-					{
-						$("#display").prop('width', obj[index].width);
-						$("#display").prop('height', obj[index].height);
-						$("#display").attr('style', 'background-color: white; margin-top: 50px; transition: 0.5s ease-in');
-						$("#rotate").css({'width': parseInt(obj[index].width) +100, 'height': parseInt(obj[index].height) +100 , 'background-color': 'black', 'border-radius':'30px' , 'transition':'0.5s ease-in'});
-					}
-					else
-					{
-						$("#display").prop('width', obj[index].height);
-						$("#display").prop('height', obj[index].width);
-						$("#display").attr('style', 'background-color: white; margin-top: 50px; transition: 0.5s ease-in');
-						$("#rotate").css({'width': parseInt(obj[index].height) +100, 'height': parseInt(obj[index].width) +100 , 'background-color': 'black', 'border-radius':'30px' , 'transition':'0.5s ease-in'});
-					}
-				}
-				
-			} 
-		}
-		
 		$("#landscape").click(function(){
 			$("#rotate").removeClass();
 			$("#rotate").addClass("landscape");
 			alignment();
 			setHeightAndWidthLand();
-			setCustomDimensions();
 		});
 		
 		$("#portrait").click(function(){
@@ -236,40 +145,77 @@
 			$("#rotate").addClass("portrait");
 			alignment();
 			setHeightAndWidthPort();
-			setCustomDimensions();
 		});
 		
-		initialize(); 
+		initialize();
 	});
 	function alignment()
 	{
 		var test= "samsung-tab";
 		if (width == 1280)
-			{	
-				if ($("#sel").val() == test && $("#rotate").hasClass("landscape")) 
+			{
+			//	alert("width");
+				if ($("#sel").val() == test) 
 				{
+				//	alert("if");
+					if ($("#rotate").hasClass("landscape"))
+					{
+					//	alert("has class");
 					$(".samsung-tab > .landscape").css('margin-left' , '-13%');
+					}
+					else
+					{
+					//	alert("rotate else");
+						$(".portrait").css('margin-left', '');
+					}
+				}
+				else
+				{
+				//	alert("else");
+					$(".landscape").css('margin-left' , '');
 				}
 			}
 		else if (width == 1024)
 		{
-			if ($("#sel").val() == test && $("#rotate").hasClass("landscape")) 
+			if ($("#sel").val() == test) 
 			{
-				$(".samsung-tab > .landscape").css('margin-left' , '-16.25%');
+				if ($("#rotate").hasClass("landscape"))
+				{
+					$(".samsung-tab > .landscape").css('margin-left' , '-16.25%');
+				}
+				else
+				{
+					$(".portrait").css('margin-left', '');
+				}
+			}
+			else
+			{
+				$(".landscape").css('margin-left' , '');
 			}
 		}
 		else if (width == 1366 || width == 1400 || width == 1440)
 		{
-			if ($("#sel").val() == test && $("#rotate").hasClass("landscape")) 
+			if ($("#sel").val() == test) 
 			{
-				$(".samsung-tab > .landscape").css('margin-left' , '-12%');
+				if ($("#rotate").hasClass("landscape"))
+				{
+					$(".samsung-tab > .landscape").css('margin-left' , '-12%');
+				}
+				else
+				{
+					$(".portrait").css('margin-left', '');
+				}
+			}
+			else
+			{
+				$(".landscape").css('margin-left' , '');
 			}
 		}
 	}
 	function initialize()
 	{
 		var url = "http://www.w3schools.com";
-		var device = "iphone-5s";
+		var device = "iphone";
 		var orientation = "portrait";
 		
 		$("#txt").val(url);
@@ -280,8 +226,6 @@
 		updateCache(url);
 		
 		updateHistory();
-		
-		updateOption();
 	}
 	
 	function renderDevice()
@@ -315,14 +259,18 @@
 		}
 		else
 		{
+			//alert(url);
 			var storedUrl = localStorage.getItem("url");					
 			var urls = storedUrl.split(",");
 			var index = urls.indexOf(url);
+		//	alert(index);
 			if (index > -1)
 			{
 				urls.splice(index, 1);
 			}
+		//	alert(urls);
 			urls.splice(0,0,url);
+		//	alert(urls);
 			localStorage.setItem("url", urls);
 		}
 	}
@@ -354,80 +302,4 @@
 		renderDevice();
 	}
 	
-	function deviceCache()
-	{  
-		var wid = $(".width").val();
-		var heigh = $(".height").val();
-		var nme = $(".name").val();
-				
-		var customDevicesJson;
-		
-		var customDevices = localStorage.getItem("custom_device");
-			
-		if (customDevices == null)
-		{
-			customDevicesJson = [];
-		}
-		else
-		{
-			customDevicesJson = jQuery.parseJSON(customDevices);
-		}
-		
-		var currentDevice = {"name":nme, "width": wid, "height": heigh};
-		
-		customDevicesJson.splice(0,0,currentDevice);
-		
-	//	alert(JSON.stringify(customDevicesJson));
-		
-		localStorage.setItem("custom_device", JSON.stringify(customDevicesJson));
-	}
-		
-	function updateOption()
-	{  
-		var storedDevice = localStorage.getItem("custom_device");
-		var obj = JSON.parse(storedDevice); 
-		var options = "";
-		for (var index=0; index < obj.length; index++)
-		{
-			options += "<option>";
-			options += obj[index].name;
-			options += "</option>"; 			
-		}
-		$("#sel > .user_defined").append(options);			  
-	}
 	
-	function cacheValidate(deviceName)
-	{  
-	//	alert("deviceName::::" + deviceName)
-		var isValid = true;
-		$("#sel option").each(function(){
-	//		alert("option:::" + $(this).text());
-			if ($(this).text() == deviceName)
-			{
-			//	alert("return false");
-				isValid = false;
-			}
-		});
-	//	alert("final return " + isValid);
-		return isValid;	
-	}
-	
-	function validateCustomDeviceName(customName)
-	{ 
-		var storedDevice = localStorage.getItem("custom_device");
-		if (storedDevice == null)
-		{
-			return true;
-		}
-	
-		var obj = JSON.parse(storedDevice); 
-		for (var index=0; index < obj.length; index++)
-		{	
-			if (obj[index].name == customName)
-			{
-				$("#cd").closest(".form-group").addClass("has-error");
-				return false;
-			}
-		}
-		return true;
-	}
