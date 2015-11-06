@@ -156,6 +156,15 @@ a:hover
 	{
 	background-color:#f6f6f6;
 	}
+.width
+	{
+	margin-top:0px;
+	margin-bottom:15px;
+	}
+.check
+	{
+	display:none;
+	}
 #display::-webkit-scrollbar
 	 {
 	width: 0px;
@@ -172,13 +181,13 @@ a:hover
 	}
 #phone
 	{
-	transform:scale(0.75,0.75);
+	transform:scale(0.75,0.75);  
 	}
 .samsung-tab
 	{
 	width:100%;
 	}
-.iphone > .portrait
+.iphone-5s > .portrait
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:454px;
@@ -187,7 +196,7 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center; 
 	}
-.iphone6 > .portrait
+.iphone-6 > .portrait
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:460px;
@@ -205,7 +214,7 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center;
 	}
-.nexus4 > .portrait
+.nexus-4 > .portrait
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:518px;
@@ -224,7 +233,7 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center;
 	}
-.ipad2 > .portrait
+.ipad-2 > .portrait
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:1390px;
@@ -256,7 +265,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	border-radius:30px;
 	}
-.iphone > .portrait > .display
+.iphone-5s > .portrait > .display
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:5.73in;
@@ -266,7 +275,7 @@ a:hover
     border:transparent;
 	display:inline;
 	}
-.iphone6 > .portrait > .display 
+.iphone-6 > .portrait > .display 
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:6.936in;
@@ -284,7 +293,7 @@ a:hover
 	margin-right:0.5%;
 	border:transparent;
 	}
-.nexus4 > .portrait > .display
+.nexus-4 > .portrait > .display
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:6.8in;
@@ -303,7 +312,7 @@ a:hover
     border:transparent;
 	display:inline;
 	}
-.ipad2 > .portrait > .display
+.ipad-2 > .portrait > .display
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:10.57in;
@@ -340,7 +349,7 @@ a:hover
 	background-color:white;
 	border:transparent;
 	}
-.iphone > .landscape
+.iphone-5s > .landscape
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:818px;
@@ -349,7 +358,7 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center;
 	}
-.iphone6 > .landscape 
+.iphone-6 > .landscape 
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:900px;
@@ -367,7 +376,7 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center;
 	}
-.nexus4 > .landscape
+.nexus-4 > .landscape
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:990px;
@@ -385,7 +394,7 @@ a:hover
 	background-repeat:no-repeat;
 	background-position:center;
 	}
-.ipad2 > .landscape
+.ipad-2 > .landscape
 	{
 	-webkit-transition: 0.5s ease-in;
 	width:1307px;
@@ -417,7 +426,7 @@ a:hover
 	-webkit-transition: 0.5s ease-in;
 	border-radius:30px;
 	}
-.iphone > .landscape > .display
+.iphone-5s > .landscape > .display
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:3.5in;
@@ -426,7 +435,7 @@ a:hover
 	margin-left:0.8%;
     border:transparent;
 	}
-.iphone6 > .landscape >.display
+.iphone-6 > .landscape >.display
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:3.96in;
@@ -444,7 +453,7 @@ a:hover
 	margin-left:0.1%;
 	border:transparent;
 	}
-.nexus4 > .landscape > .display
+.nexus-4 > .landscape > .display
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:4.45in;
@@ -462,7 +471,7 @@ a:hover
 	margin-right:5.2%;
     border:transparent;
 	}
-.ipad2 > .landscape > .display
+.ipad-2 > .landscape > .display
 	{
 	-webkit-transition: 0.5s ease-in;
 	height:8.04in;
