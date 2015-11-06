@@ -46,19 +46,19 @@
 				<select id="sel" class="form-control">
 						<option value="1" disabled selected>Select the device</option>
 						<optgroup label="Phones"> 
-						<option value="iphone" selected="selected">iPhone 5s </option>
-						<option value="iphone6"> iPhone 6</option>
+						<option value="iphone-5s" selected="selected">iPhone 5s </option>
+						<option value="iphone-6"> iPhone 6</option>
 						<option value="iphone6-plus"> iPhone 6 plus</option>
-						<option value="nexus4">LG Nexus 4 </option>
+						<option value="nexus-4">LG Nexus 4 </option>
 						<option value="moto-g">Moto G </option>
 						</optgroup>
 						<optgroup label="Tablets">
-						<option value="ipad2"> iPad2</option>
+						<option value="ipad-2"> iPad2</option>
 						<option value="ipad-air2"> iPad Air 2</option>
 						<option value="samsung-tab"> Samsung Galaxy Tab 4</option>
 						</optgroup>
-						<optgroup label="Custom">
-						<option value="custom" data-toggle="modal"> Custom device</option>   
+						<optgroup label="Custom" class="user_defined">
+						<option value="custom" data-toggle="modal"> Custom device</option> 
 						</optgroup>
 				</select>
 			</div>	
@@ -82,11 +82,14 @@
 						<h4 class="modal-title">Custom device</h4>
 					</div>
 					<div class="modal-body">
-						 <input type="text" placeholder="width in pixels" class="form-control width" autofocus>
-						 <input type="text" placeholder="height in pixels" class="form-control height">
+						<div id ="cd"class="form-group">
+						 <input type="text" placeholder="Enter custom name" class="name form-control " autofocus>
+						</div>
+						 <input type="text" placeholder="Width in pixels" class="form-control width">
+						 <input type="text" placeholder="Height in pixels" class="form-control height">
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-success ok-btn" data-dismiss="modal">ok</button>
+						<button type="button" class="btn btn-success ok-btn">ok</button>
 					</div>
 				</div>
 			</div>
