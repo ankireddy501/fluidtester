@@ -1,4 +1,4 @@
-	var REG_EX = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/[a-zA-Z0-9]|https:\/\/[a-zA-Z0-9])[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+	var REG_EX = /^(http:\/\/www\.|http:\/\/m\.|https:\/\/www\.|http:\/\/[a-zA-Z0-9]|https:\/\/[a-zA-Z0-9])[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 	var width = $(window).width();
 	$(document).ready(function(){
 	  $('#main-sidebar').simplerSidebar({
@@ -13,8 +13,14 @@
 				closingLinks: '.close-sb'
 			}
 		});
-
-			
+		
+		chrome.tabs.query({
+		currentWindow: true, active:true},
+			function(tabArray){
+				var tabId = JSON.stringify(tabArray[0].id);
+				localStorage.setItem("tabId", tabId);
+		});
+	
 		$("#txt").keypress(function(e){
 			var key=e.which;
 			if (key == 13)
@@ -37,6 +43,8 @@
 			$("#rotate").removeAttr("style");
 			$("#display").removeAttr("style");
 			var link=$("#txt").val();
+			localStorage.setItem("OS", $(this).val());
+			
 			if (!link == null) 
 			{
 				$("#phone").removeClass();
@@ -271,6 +279,7 @@
 		var url = "http://www.w3schools.com";
 		var device = "iphone-5s";
 		var orientation = "portrait";
+		localStorage.setItem("OS", device);
 		
 		$("#txt").val(url);
 		$("#display").prop("src",url);
@@ -290,6 +299,7 @@
 		if(REG_EX.test(url))
 		{
 			$(".form-group").removeClass("has-error");
+		//	localStorage['user-agent'] = "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36";
 		} 
 		else 
 		{
@@ -297,11 +307,8 @@
 			$("#txt").focus();
 			return false;
 		}
-		
-		$("#display").prop("src",url)
-		
+			$("#display").prop("src",url);
 		updateCache(url);
-		
 		updateHistory();
 	}
 	
@@ -431,3 +438,8 @@
 		}
 		return true;
 	}
+	
+	window.onbeforeunload = function(){
+		localStorage.removeItem("tabId");
+		localStorage.removeItem("OS");
+	};

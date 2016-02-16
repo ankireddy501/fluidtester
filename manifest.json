@@ -5,6 +5,15 @@
       }
    },
    "description": "To test the responsiveness of the web page",
+   "permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>",
+		"tabs"
+	],
+	"background": {
+      "scripts": [ "background.js" ]
+   },
    "icons": {
       "128": "128x128 .png",
       "16": "16x16.png"
