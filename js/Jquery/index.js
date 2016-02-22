@@ -49,7 +49,8 @@
 			{
 				$("#phone").removeClass();
 				$("#phone").addClass($(this).val());
-				$("#display").prop("src",link)
+				$("#display").prop("src",link);
+				
 				alignment();
 			}
 			else 
@@ -299,7 +300,7 @@
 		if(REG_EX.test(url))
 		{
 			$(".form-group").removeClass("has-error");
-		//	localStorage['user-agent'] = "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36";
+		
 		} 
 		else 
 		{
@@ -440,6 +441,7 @@
 	}
 	
 	window.onbeforeunload = function(){
+		
 		localStorage.removeItem("tabId");
 		localStorage.removeItem("OS");
 	};
