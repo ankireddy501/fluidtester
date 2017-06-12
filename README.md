@@ -7,3 +7,5 @@ many of them might have used chrome plugin for testing the responsiveness of the
 this responsiveness testing ? the answer to this question is fluid tester.
 
 We have support a set of devices majority of the people using. 
+
+#### mobile testing
